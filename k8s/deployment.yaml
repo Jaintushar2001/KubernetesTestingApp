@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubernetesapp-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kubernetesapp
+  template:
+    metadata:
+      labels:
+        app: kubernetesapp
+    spec:
+      containers:
+      - name: kubernetesapp
+        image: jaintushar2001/kubernetesapp:version2  
+        ports:
+        - containerPort: 8000
+        resources:                                  
+          requests:
+            memory: "256Mi"                         
+            cpu: "500m"                             
+          limits:
+            memory: "512Mi"                        
+            cpu: "1"      
