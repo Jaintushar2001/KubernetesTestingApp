@@ -19,9 +19,9 @@ public class UserController {
 	        userList.add(new User(5, "Lavina", "lavina@gmail.com", "+919235547821"));
 	   }
        
-	  @GetMapping("/home")
+	  @GetMapping("/")
 	  public String home() {
-		  return "This is my returning string";
+		  return "Running Kubernetes Testing Application Successfully!";
 	  }
 	  
 	  @GetMapping("/users")
