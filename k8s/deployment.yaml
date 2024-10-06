@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kubernetesapp-deployment
+  name: minikubeapp-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: kubernetesapp
+      app: minikubeapp
   template:
     metadata:
       labels:
-        app: kubernetesapp
+        app: minikubeapp
     spec:
       containers:
-      - name: kubernetesapp
-        image: jaintushar2001/kubernetesapp:version2  
+      - name: minikubeapp
+        image: jaintushar2001/minikubeapp:version1  
         ports:
         - containerPort: 8000
         resources:                                  

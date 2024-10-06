@@ -3,7 +3,6 @@ import java.util.List;
 import java.util.ArrayList;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.nagarro.bench.kubernetesSpringApp.model.User;
 
 @RestController
@@ -18,10 +17,10 @@ public class UserController {
 	        userList.add(new User(4, "Khushi", "khushi@gmail.com", "+919036992131"));
 	        userList.add(new User(5, "Lavina", "lavina@gmail.com", "+919235547821"));
 	   }
-       
-	  @GetMapping("/home")
+	  
+	  @GetMapping("/")
 	  public String home() {
-		  return "This is my returning string";
+		  return "Running Kubernetes App Successfully !";
 	  }
 	  
 	  @GetMapping("/users")
